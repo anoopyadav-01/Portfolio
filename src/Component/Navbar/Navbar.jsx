@@ -45,11 +45,6 @@ const Navbar = () => {
           </AnchorLink>
         </li>
 
-        <li className={menu === "work" ? "active-link" : ""}>
-          <AnchorLink href="#work" offset={120} className="anchor-link">
-            <p onClick={() => handleLinkClick("work")}>Portfolio</p>
-          </AnchorLink>
-        </li>
         <li className={menu === "skills-section" ? "active-link" : ""}>
           <AnchorLink
             href="#skills-section"
@@ -57,6 +52,11 @@ const Navbar = () => {
             className="anchor-link"
           >
             <p onClick={() => handleLinkClick("skills-section")}>Skills</p>
+          </AnchorLink>
+        </li>
+        <li className={menu === "work" ? "active-link" : ""}>
+          <AnchorLink href="#work" offset={120} className="anchor-link">
+            <p onClick={() => handleLinkClick("work")}>Portfolio</p>
           </AnchorLink>
         </li>
         <li className={menu === "contact" ? "active-link" : ""}>
