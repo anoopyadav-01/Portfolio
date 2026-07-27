@@ -1,0 +1,158 @@
+.navbar {
+  position: sticky;
+  top: 15px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 120px;
+  padding: 12px 25px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 120px;
+  transition: transform 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-menu li {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: #222;
+}
+
+.nav-menu li p {
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.nav-menu li:hover p {
+  color: #b923e1;
+  transform: translateY(-2px);
+}
+
+.nav-menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #da7c25, #b923e1);
+  transition: width 0.3s ease;
+}
+
+.nav-menu li:hover::after,
+.active-link::after {
+  width: 100%;
+}
+
+.nav-connect {
+  padding: 14px 24px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0%, #b923e1 100%);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.nav-connect p {
+  color: white;
+  font-weight: 600;
+}
+
+.nav-connect:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(185, 35, 225, 0.4);
+}
+
+.nav-mob-open,
+.nav-mob-close {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 15px;
+    padding: 12px 20px;
+  }
+
+  .nav-mob-open {
+    display: block;
+    width: 30px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    transition: right 0.4s ease;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-mob-close {
+    display: block;
+    width: 30px;
+
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+
+  .nav-menu li p {
+    color: white;
+    font-size: 22px;
+  }
+
+  .nav-connect {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .navbar {
+    margin: 20px 50px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .nav-menu {
+    gap: 12px;
+    font-size: 17px;
+  }
+
+  .nav-connect {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
