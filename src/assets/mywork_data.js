@@ -20,7 +20,7 @@ const mywork_data = [
     w_no: 3,
     w_name: "PortFolio",
     w_img: project3_img,
-    w_link: "https://github.com/anoopyadav-01/FeastFlow.git",
+    w_link: "https://github.com/anoopyadav-01/Portfolio.git",
   },
   {
     w_no: 4,
